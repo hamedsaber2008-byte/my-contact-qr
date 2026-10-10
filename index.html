@@ -3,25 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102C4A">
 <title>تماس با صاحب وسیله</title>
+
 <style>
-body{font-family:Arial,sans-serif;text-align:center;background:#f3f5f7;padding:30px 15px;color:#222}
-.card{max-width:360px;margin:35px auto;background:white;padding:25px 18px;border-radius:18px;box-shadow:0 4px 18px #0001}
-a{display:block;margin:15px 0;padding:14px;border-radius:10px;text-decoration:none;font-size:18px;background:#1769aa;color:white}
-p{line-height:1.9}
-.en{direction:ltr}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 25px 15px;
+  font-family: Tahoma, Arial, sans-serif;
+  background: linear-gradient(145deg, #0b1e33, #17476b, #0c2d49);
+  color: #172536;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 410px;
+  padding: 30px 20px;
+  background: #ffffff;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 18px 55px #0004;
+}
+
+h1 {
+  margin: 0 0 15px;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.8;
+  color: #102c4a;
+}
+
+.rule {
+  width: 65px;
+  height: 4px;
+  margin: 0 auto 20px;
+  border-radius: 8px;
+  background: #1688c7;
+}
+
+p {
+  margin: 0 0 25px;
+  font-size: 17px;
+  line-height: 2;
+  color: #475569;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 66px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact svg {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.phone {
+  background: #1478b8;
+}
+
+.bale {
+  background: #159b68;
+}
+
+.telegram {
+  background: #168fcb;
+}
+
+.note {
+  margin-top: 22px;
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.9;
+}
 </style>
 </head>
+
 <body>
-<div class="card">
-<h2>وسیله‌ای گم شده؟</h2>
-<p>سلام، لطفاً برای اطلاع به صاحب وسیله، با او تماس بگیرید.</p>
-<a href="tel:+989120766490">تماس تلفنی: 09120766490</a>
-<a href="https://ble.ir/H_saber1">تماس در بله: @H_saber1</a>
-<a href="tg://resolve?domain=H_saber1">تماس در تلگرام: @H_saber1</a>
-<hr>
-<h2 class="en">Found something?</h2>
-<p class="en">Hello, please contact the owner to let them know.</p>
-</div>
+<main class="card">
+
+  <h1>این وسیله متعلق به من است</h1>
+  <div class="rule"></div>
+
+  <p>لطفاً با یکی از روش‌های زیر با من تماس بگیرید.</p>
+
+  <nav class="links">
+
+    <!-- تماس تلفنی -->
+    <a class="contact phone" href="tel:+989120766490">
+      <svg viewBox="0 0 48 48" aria-label="تلفن">
+        <defs>
+          <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#63df83"/>
+            <stop offset="1" stop-color="#20a957"/>
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="46" height="46" rx="13" fill="url(#green)"/>
+        <path fill="#fff" d="M15.2 10.8c-1.1-.7-2.4-.3-3.1.7l-2 3.1c-1.1 1.7.4 6.8 6.3 12.7s11 7.4 12.7 6.3l3.1-2c1-.7 1.4-2 .7-3.1l-3.1-4.6c-.7-1-2-1.3-3.1-.7l-2.8 1.7c-2.1-1.1-4.2-3.2-5.3-5.3l1.7-2.8c.6-1.1.3-2.4-.7-3.1z"/>
+      </svg>
+      <span>تماس تلفنی</span>
+    </a>
+
+    <!-- بله -->
+    <a class="contact bale"
+       href="https://ble.ir/H_saber1"
+       target="_blank" rel="noopener">
+      <svg viewBox="0 0 48 48" aria-label="بله">
+        <rect width="48" height="48" rx="13" fill="#fff"/>
+        <path fill="#159b68" d="M24 7.5c-9.2 0-16.5 6.5-16.5 14.6 0 4.3 2.1 8.1 5.6 10.8l-1.4 6.3 7-3.1c1.7.5 3.5.7 5.3.7 9.2 0 16.5-6.5 16.5-14.6S33.2 7.5 24 7.5z"/>
+        <path fill="#fff" d="M15 19.2h18v3.2H15zm0 6.1h13v3.2H15z"/>
+      </svg>
+      <span>تماس در بله</span>
+    </a>
+
+    <!-- تلگرام -->
+    <a class="contact telegram"
+       href="tg://resolve?domain=H_saber1">
+      <svg viewBox="0 0 48 48" aria-label="تلگرام">
+        <rect width="48" height="48" rx="13" fill="#fff"/>
+        <circle cx="24" cy="24" r="17" fill="#229ED9"/>
+        <path fill="#fff" d="M13.2 23.2 33.6 15c1-.4 1.8.2 1.4 1.8l-3.5 16.5c-.3 1.2-1 1.5-2 .9l-5.5-4.1-2.7 2.6c-.3.3-.6.6-1.2.6l.4-5.7 10.4-9.4c.5-.4-.1-.7-.7-.3l-12.9 8.1-5.5-1.7c-1.2-.4-1.2-1.2 1.4-2.1z"/>
+      </svg>
+      <span>تماس در تلگرام</span>
+    </a>
+
+  </nav>
+
+  <div class="note">
+    سپاس از اینکه برای بازگرداندن وسیله کمک می‌کنید.
+  </div>
+
+</main>
 </body>
 </html>
